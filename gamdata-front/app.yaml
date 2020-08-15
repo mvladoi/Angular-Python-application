@@ -1,0 +1,9 @@
+runtime: python38
+
+
+handlers:
+- url: /
+  static_files: dist/gamdata-front/index.html
+  upload: dist/gamdata-front/index.html
+- url: /
+  static_dir: dist/gamdata-front

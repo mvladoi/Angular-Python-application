@@ -1,0 +1,25 @@
+
+
+<div *ngIf="player">
+
+    <h2>{{player.name | uppercase}} Player</h2>
+    <div><span>id: </span>{{player.id}}</div>
+    <div>
+
+      <label>name:
+        <input [(ngModel)]="player.name" placeholder="name"/>
+      </label>
+
+      <label>score:
+       <input [(ngModel)]="player.score" placeholder="score"/>
+     </label>
+
+    </div>
+    <button class="clear"  (click)="goBack()">go back</button>
+    <button class="clear"  (click)="save()">save</button>
+  </div>
+
+
+
+
+  

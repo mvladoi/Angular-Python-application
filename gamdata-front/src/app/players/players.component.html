@@ -1,0 +1,38 @@
+
+<div>
+  <label>Player name:
+    <input #playerName />
+  </label>
+
+  <label>Player score:  
+    <input #playerScore />
+  </label>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="clear" (click)="add(playerName.value,playerScore.value); playerName.value='';playerScore.value=0">add</button>
+</div>
+
+
+
+
+<h2>My Players</h2>
+
+
+
+<ul class="players">
+    <span class="badge"> Score</span> Name 
+    <li *ngFor="let player of players">
+        <a routerLink="/detail/{{player.id}}">
+            <span class="badge">{{player.score}}</span> {{player.name}}
+          </a>
+        <button class="clear" title="delete player"
+      (click)="delete(player)">delete</button>
+      
+  </li>
+</ul>
+
+
+<h2>Players Score Chart</h2>
+<div id="divChart">
+    <canvas id="myChart"></canvas>
+</div>
